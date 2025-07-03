@@ -1,0 +1,69 @@
+/* Navbar Container */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Equivalent to items-center */
+    padding-top: 1.25rem; /* py-5, where 1 unit = 0.25rem, so 5 units = 1.25rem */
+    padding-bottom: 1.25rem; /* py-5 */
+    margin-left: 2rem; /* mx-8, where 8 units = 2rem */
+    margin-right: 2rem; /* mx-8 */
+  }
+  
+  /* Responsive margins */
+  @media (min-width: 640px) { /* Corresponds to sm: */
+    .navbar-container {
+      margin-left: 5rem; /* sm:mx-20, where 20 units = 5rem */
+      margin-right: 5rem; /* sm:mx-20 */
+    }
+  }
+  
+  @media (min-width: 1280px) { /* Corresponds to xl: */
+    .navbar-container {
+      margin-left: 8rem; /* xl:mx-32, where 32 units = 8rem */
+      margin-right: 8rem; /* xl:mx-32 */
+    }
+  }
+  
+  /* Navbar Logo */
+  .navbar-logo {
+    width: 8rem; /* w-32, where 1 unit = 0.25rem, so 32 units = 8rem */
+  }
+  
+  /* Responsive logo width */
+  @media (min-width: 640px) { /* Corresponds to sm: */
+    .navbar-logo {
+      width: 11rem; /* sm:w-44, where 44 units = 11rem */
+    }
+  }
+  
+  /* Login Button */
+  .login-button {
+    display: flex;
+    align-items: center; /* items-center */
+    gap: 0.5rem; /* gap-2, where 2 units = 0.5rem */
+    border-radius: 9999px; /* rounded-full */
+    font-size: 0.875rem; /* text-sm, typically 14px */
+    cursor: pointer;
+    background-color: var(--primary-color); /* bg-primary */
+    color: #fff; /* text-white */
+    padding-left: 2.5rem; /* px-10, where 10 units = 2.5rem */
+    padding-right: 2.5rem; /* px-10 */
+    padding-top: 0.625rem; /* py-2.5, where 2.5 units = 0.625rem */
+    padding-bottom: 0.625rem; /* py-2.5 */
+    border: none; /* Buttons often have default borders, remove it */
+    transition: ease-in-out 1s;
+  }
+  
+  /* Login Button Arrow */
+  .login-button-arrow {
+    width: 0.75rem; /* w-3, where 3 units = 0.75rem */
+  }
+
+  .login-button:hover{
+    transform: scale(1.2);
+  }
+  
+  /* Define custom primary color (example, adjust as needed) */
+  :root {
+    --primary-color: #5044E5; /* Example purple color, replace with your actual primary color */
+  }

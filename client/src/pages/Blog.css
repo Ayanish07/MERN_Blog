@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+body{
+    font-family: Outfit;
+}
+
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+
+.Blog-Page {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 2rem;
+  }
+  
+  /* Background image styling */
+  .Background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Makes the image cover the full container */
+    z-index: -1; /* Put behind everything */
+    
+  }
+
+  /* --- Global Variables (if not already defined in a global CSS file) --- */
+:root {
+    --primary-color-rgb-values: 80, 68, 229; /* RGB values for #5044E5 */
+    --primary-color: #5044E5; /* Hex value for #5044E5 */
+  }
+  
+  /* --- Blog Page Wrapper --- */
+  .Blog-Page {
+    /* This div serves as the main container for the blog page. */
+    /* Add any page-specific layout or padding here if needed. */
+    position: relative; /* Ensure proper stacking context for absolute children */
+    overflow-x: hidden; /* Prevent horizontal scroll if background overflows */
+  }
+  
+  /* --- Background Image (className='Background') --- */
+  /* Corresponds to: img className='absolute -top-50 z-1 opacity-50' from image_b5d13e.png */
+  .Background {
+    position: absolute; /* absolute */
+    top: -12.5rem; /* -top-50 (50 units * 0.25rem = 12.5rem) */
+    z-index: -1; /* z-1 */
+    opacity: 0.5; /* opacity-50 */
+    width: 100%; /* Ensure it spans the full width */
+    height: auto; /* Maintain aspect ratio */
+    /* If this background is meant to span the entire page regardless of content height,
+       you might consider `height: 100vh;` or adjust its parent. */
+  }
+  
+  /* --- Blog Header Content Container --- */
+  /* Corresponds to: div className='text-center mt-20 text-gray-600' from image_b5d13e.png */
+  .blog-header-content {
+    text-align: center; /* text-center */
+    margin-top: 5rem; /* mt-20 (20 units * 0.25rem = 5rem) */
+    color: #4a5568; /* text-gray-600 */
+    /* Add max-width and margin-left/right: auto if you want to constrain this section's width */
+    max-width: 60rem; /* Example: to keep content readable */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* Add some padding to prevent text touching edges on small screens */
+    padding-right: 1rem;
+  }
+  
+  /* --- Published Date Paragraph (className='published-date') --- */
+  /* Corresponds to: p className='text-primary py-4 font-medium' from image_b5d13e.png */
+  .published-date {
+    color: var(--primary-color); /* text-primary */
+    padding-top: 1rem; /* py-4 (4 units * 0.25rem = 1rem) */
+    font-weight: 500; /* font-medium */
+  }
+  
+  /* --- Blog Title Heading (className='blog-title') --- */
+  /* Corresponds to: h1 className='text-2xl sm:text-5xl font-semibold max-w-2xl mx-auto text-gray-800' from image_b5d13e.png */
+  .blog-title {
+    font-size: 1.5rem; /* text-2xl (24px / 16px base = 1.5rem) */
+    font-weight: 600; /* font-semibold */
+    max-width: 42rem; /* max-w-2xl (42rem or 672px) */
+    margin-left: auto; /* mx-auto */
+    margin-right: auto; /* mx-auto */
+    color: #2d3748; /* text-gray-800 */
+    line-height: 1.2; /* Adjust line-height for large titles if needed */
+    margin-bottom: 0.5rem; /* Small space below title */
+  }
+  
+  /* Responsive blog title size for small screens and up */
+  @media (min-width: 640px) { /* Corresponds to sm: */
+    .blog-title {
+      font-size: 3rem; /* sm:text-5xl (48px / 16px base = 3rem) */
+    }
+  }
+  
+  /* --- Blog Subtitle Heading (className='blog-subtitle') --- */
+  /* Corresponds to: h2 className='my-5 max-w-lg truncate mx-auto' from image_b5d13e.png */
+  .blog-subtitle {
+    margin-top: 1.25rem; /* my-5 (5 units * 0.25rem = 1.25rem) */
+    margin-bottom: 1.25rem; /* my-5 */
+    max-width: 40rem; /* max-w-lg (40rem or 640px) */
+    overflow: hidden; /* truncate */
+    white-space: nowrap; /* truncate */
+    text-overflow: ellipsis; /* truncate */
+    margin-left: auto; /* mx-auto */
+    margin-right: auto; /* mx-auto */
+    color: #4a5568; /* Example: default grey for subtitles */
+    font-size: 1.125rem; /* Example: text-lg */
+    font-weight: 400; /* Example: normal weight */
+  }
+  
+  /* --- Author Info Paragraph (className='author-info') --- */
+  /* Corresponds to: p className='inline-block py-1 px-4 rounded-full mb-6 border text-sm border-primary/35 bg-primary/5 font-medium text-primary' from image_b5d13e.png */
+  .author-info {
+    display: inline-block; /* inline-block */
+    padding-top: 0.25rem; /* py-1 (1 unit * 0.25rem = 0.25rem) */
+    padding-bottom: 0.25rem; /* py-1 */
+    padding-left: 1rem; /* px-4 (4 units * 0.25rem = 1rem) */
+    padding-right: 1rem; /* px-4 */
+    border-radius: 9999px; /* rounded-full */
+    margin-bottom: 1.5rem; /* mb-6 (6 units * 0.25rem = 1.5rem) */
+    border: 1px solid rgba(var(--primary-color-rgb-values), 0.35); /* border-primary/35 */
+    background-color: rgba(var(--primary-color-rgb-values), 0.05); /* bg-primary/5 */
+    font-size: 0.875rem; /* text-sm (typically 14px) */
+    font-weight: 500; /* font-medium */
+    color: var(--primary-color); /* text-primary */
+  }
+  
+  /* --- Placeholders for Main Blog Content and Related Posts --- */
+  .blog-main-content {
+    /* Define styles for your main blog post content area */
+    max-width: 50rem; /* Example max-width for content readability */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .blog-main-content h3 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .blog-main-content p {
+    margin-bottom: 1rem;
+  }
+  
+  .blog-related-posts {
+    /* Define styles for a section showing related blog posts */
+    margin-top: 3rem;
+    padding: 1rem;
+    border-top: 1px solid #eee;
+  }
+
+  /* --- Blog Main Content Section --- */
+
+/* Corresponds to the div with className='mx-5 max-w-5xl md:mx-auto my-10 mt-6' in image_b64dd7.png */
+.blog-main-content {
+    margin-left: 1.25rem; /* mx-5 (5 units * 0.25rem = 1.25rem) */
+    margin-right: 1.25rem; /* mx-5 */
+    max-width: 64rem; /* max-w-5xl (5xl in Tailwind is 64rem or 1024px) */
+    margin-top: 2.5rem; /* my-10 (10 units * 0.25rem = 2.5rem) AND mt-6 (6 units * 0.25rem = 1.5rem).
+                           If both my-10 and mt-6 are on the same element, Tailwind resolves
+                           it to the last one. Assuming my-10 is for vertical margin.
+                           I will use mt-6 (1.5rem) and mb-2.5rem to align with my-10*/
+    margin-bottom: 2.5rem; /* my-10 */
+    /* md:mx-auto is a responsive class, applied below in media query */
+  }
+  
+  /* Responsive centering for medium screens and up */
+  @media (min-width: 768px) { /* Corresponds to md: */
+    .blog-main-content {
+      margin-left: auto; /* md:mx-auto */
+      margin-right: auto; /* md:mx-auto */
+    }
+  }
+  
+  /* Image within Blog Main Content (className='Photo') */
+  /* Corresponds to: img className='rounded-3xl mb-5' from image_b64dd7.png */
+  .Photo {
+    border-radius: 1.5rem; /* rounded-3xl (3xl in Tailwind is 1.5rem or 24px) */
+    margin-bottom: 2.25rem; /* mb-5 (5 units * 0.25rem = 1.25rem) */
+    width: 100%; /* Ensure image fills its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below image */
+  }
+  
+  /* Blog Writing Content (className='Blog-writing') */
+  /* This div contains content rendered via dangerouslySetInnerHTML.
+     Tailwind classes were not directly on this div in the provided image.
+     Applying general styles common for rich text content. */
+  .rich-text {
+    line-height: 1.6; /* For readability of text */
+    color: #333; /* Darker text color for content */
+    font-size: 1rem; /* Base font size for readability */
+  }
+  
+  /* Styling for elements *inside* Blog-writing, as they won't have direct classes */
+  .rich-text h1 {
+    font-size: 1.7em; /* Equivalent to a large heading */
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+  }
+  
+  .rich-text h2 {
+    font-size: 1.2em; /* Equivalent to a medium heading */
+    /* margin-top: 1em; */
+    
+    font-weight: bold;
+  }
+  
+  .rich-text h3 {
+    font-size: 1.2em;
+    margin-top: 0.8em;
+    margin-bottom: 0.4em;
+    font-weight: bold;
+  }
+  
+  .rich-text p {
+    margin-bottom: 1em; /* Space between paragraphs */
+  }
+  
+  .rich-text ul,
+  .rich-text ol {
+    margin-bottom: 1em;
+    padding-left: 1.5em;
+  }
+  
+  .rich-text li {
+    margin-bottom: 0.5em;
+  }
+  
+  .rich-text a {
+    color: var(--primary-color); /* Link color */
+    text-decoration: underline;
+  }
+
+  .rich-text { /* max-w-3xl mx-auto */
+    max-width: 48rem; /* max-w-3xl (48rem or 768px) */
+    margin-left: auto; /* mx-auto */
+    margin-right: auto; /* mx-auto */
+    /* Add padding if this is a standalone rich text block not already within another padded container */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box; /* Include padding in width calculation */
+  }
+
+  .Comments-section{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .Comment-Card {
+    position: relative;
+    background-color: rgba(80, 68, 229, 0.1);
+    border: 1px solid rgba(80, 68, 229, 0.2);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    max-width: 640px;
+    color: #4b5563;
+    min-height: 80px; /* Add this to prevent collapse */
+  }
+
+  /* Container */
+.Comments {
+    margin-top: 3.5rem;
+    margin-bottom: 2.5rem;
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .Comments > p {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  
+  /* Section with all comments */
+  .Comments-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* Each comment card */
+  .Comment-Card {
+    position: relative;
+    background-color: rgba(80, 68, 229, 0.06); /* bg-primary/2 */
+    border: 1px solid rgba(80, 68, 229, 0.2); /* border-primary/5 */
+    border-radius: 0.5rem;
+    padding: 1rem;
+    max-width: 640px;
+    color: #4b5563; /* text-gray-600 */
+    min-height: 80px;
+    position: relative;
+    overflow: visible;
+  }
+  
+  /* Header row with photo and name */
+  .cc {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* User profile image */
+  .user-photo {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  /* Name */
+  .user {
+    font-weight: 500;
+  }
+  
+  /* Comment text */
+  .comment-content {
+    font-size: 0.875rem;
+    max-width: 90%;
+    margin-left: 2rem;
+    color: #374151; /* Ensure visible dark color (e.g., Tailwind's gray-700) */
+    z-index: 1;
+    position: relative;
+    word-break: break-word;
+  }
+  
+  /* Time */
+  .comment-time {
+    position: absolute;
+    right: 1rem;
+    bottom: 0.75rem;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #6b7280; /* Tailwind gray-500 */
+    background: rgba(255, 255, 255, 0.6); /* Add subtle background if overlapping */
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  
+  .Comment-Panel {
+    max-width: 640px;
+    margin: 3rem auto 5rem;
+    transform: translateX(-2.8rem);
+    padding: 2rem;
+    border: 1px solid rgba(80, 68, 229, 0.2);
+    background-color: rgba(80, 68, 229, 0.05);
+    border-radius: 0.75rem;
+    font-family: 'Outfit', sans-serif;
+    color: #374151;
+    box-sizing: border-box;
+  }
+  
+  
+  .Comment-Panel p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    color: #5044E5;
+  }
+  
+  .Comment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* align fields to the left */
+    gap: 1.25rem;
+    max-width: 32rem; /* same as max-w-lg (512px) */
+    width: 100%;
+  }
+  
+  .Comment-Name,
+  .Comment-area {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(80, 68, 229, 0.2);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    background-color: white;
+    color: #1f2937;
+    outline: none;
+  }
+  
+  .Comment-Name:focus,
+  .Comment-area:focus {
+    border-color: #5044E5;
+    box-shadow: 0 0 0 2px rgba(80, 68, 229, 0.15);
+  }
+  
+  .Comment-area {
+    min-height: 12rem; /* same as h-48 */
+    resize: vertical;
+  }
+  
+  .Comment-submit {
+    background-color: #5044E5;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .Comment-submit:hover {
+    transform: scale(1.02);
+    background-color: #3d35c2;
+  }
+  
+  .Share-Section {
+    max-width: 640px;
+    margin: 2.5rem auto 4rem;
+    padding: 1.5rem;
+    font-family: 'Outfit', sans-serif;
+    text-align: center;
+    transform: translateX(-2rem);
+  }
+  
+  .share-text {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: gray;
+    margin-bottom: 1rem;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .social-icons img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .social-icons img:hover {
+    transform: scale(1.1);
+  }
+  

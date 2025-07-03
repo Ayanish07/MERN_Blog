@@ -1,0 +1,60 @@
+.comment-row {
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .comment-blog-details {
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #374151;
+    line-height: 1.5;
+  }
+  
+  .label {
+    font-weight: 600;
+    color: #111827;
+  }
+  
+  .comment-date {
+    padding: 1rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  .hide-on-small {
+    display: table-cell;
+  }
+  
+  @media (max-width: 640px) {
+    .hide-on-small {
+      display: none;
+    }
+  }
+  
+  .comment-actions {
+    padding: 1rem;
+    vertical-align: middle;
+  }
+  
+  .actions-wrapper {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+  }
+  
+  .action-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .action-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  .approved-label {
+    font-size: 0.75rem;
+    color: #10b981; /* Tailwind green-500 */
+    font-weight: 600;
+  }
+  

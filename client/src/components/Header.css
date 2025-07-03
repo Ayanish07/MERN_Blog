@@ -1,0 +1,192 @@
+:root {
+    --primary-color-rgb-values: 80, 68, 229; /* RGB values for #5044E5 */
+    --primary-color: #5044E5; /* Define the hex color directly for 'text-primary' */
+}
+
+
+.Header-container{
+    margin-left: 2rem; /* mx-8 (8 units * 0.25rem/unit = 2rem) */
+  margin-right: 2rem; /* mx-8 */
+  position: relative; /* relative */
+}
+
+@media (min-width: 640px) { /* Corresponds to sm: */
+    .Header-container {
+      margin-left: 4rem; /* sm:mx-16 (16 units * 0.25rem/unit = 4rem) */
+      margin-right: 4rem; /* sm:mx-16 */
+    }
+  }
+
+  @media (min-width: 1280px) { /* Corresponds to xl: */
+    .Header-container {
+      margin-left: 6rem; /* xl:mx-24 (24 units * 0.25rem/unit = 6rem) */
+      margin-right: 6rem; /* xl:mx-24 */
+    }
+  }
+  
+  .feature-pill {
+    display: inline-flex; /* inline-flex */
+    align-items: center; /* items-center */
+    justify-content: center; /* justify-center */
+    gap: 1rem; /* gap-4 (4 units * 0.25rem = 1rem) */
+    padding-left: 1.5rem; /* px-6 (6 units * 0.25rem = 1.5rem) */
+    padding-right: 1.5rem; /* px-6 */
+    padding-top: 0.375rem; /* py-1.5 (1.5 units * 0.25rem = 0.375rem) */
+    padding-bottom: 0.375rem; /* py-1.5 */
+    margin-bottom: 1rem; /* mb-4 (4 units * 0.25rem = 1rem) */
+    border: 1px solid rgba(var(--primary-color-rgb-values), 0.4); /* border border-primary/40 */
+    background-color: rgba(var(--primary-color-rgb-values), 0.1); /* bg-primary/10 */
+    border-radius: 9999px; /* rounded-full */
+    font-size: 0.875rem; /* text-sm (typically 14px) */
+    color: var(--primary-color); /* text-primary */
+  }
+
+  .star-icon {
+    width: 0.625rem; /* w-2.5 (2.5 units * 0.25rem/unit = 0.625rem) */
+    height: auto;
+  }
+
+  .background-gradient {
+    position: absolute; /* absolute */
+    top: -12.5rem; /* -top-50 (-50 units * 0.25rem/unit = -12.5rem) */
+    z-index: -1; /* z-1 */
+    opacity: 0.5; /* opacity-50 */
+    /* Ensure this image fills its intended space, e.g., width: 100%; height: auto; */
+    width: 100%; /* Example: adjust as needed for your specific background image */
+    height: auto; /* Example: adjust as needed */
+  }
+
+  .Header-text{
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .tagline{
+    font-size: 1.875rem; /* text-3xl (30px / 16px base = 1.875rem) */
+  font-weight: 600; /* font-semibold */
+  color: #656d79; /* text-gray-700 (standard Tailwind gray-700 hex value) */
+}
+  
+@media (min-width: 640px) { /* Corresponds to sm: */
+    .tagline {
+      font-size: 3.75rem; /* sm:text-6xl (60px / 16px base = 3.75rem) */
+      line-height: 1; /* sm:leading-16 (16 * 0.25rem = 4rem, but usually leading is unitless relative to font-size. Tailwind's `leading-16` is `line-height: 4rem;` if fixed, or `1` for specific texts, `1` for `leading-none`. Since `leading-16` isn't a standard Tailwind utility for a direct unitless value of 16, it's likely a custom value or refers to a large fixed height. For text sizing this large, a common aesthetic is a line-height of 1 or slightly above 1 for tight spacing. If it was `leading-none`, it's 1. If it was a fixed line-height of 16px, that would be very small. Given the large font size, a line-height of 1 or similar is more probable for `leading-none` or `leading-tight`. Let's assume `1` for now, or you might need to adjust based on visual output. If it was `leading-4rem`, it would be `line-height: 4rem;`. Let's use `1` for a tighter look often associated with very large headers.) */
+      line-height: 1; /* This is an interpretation. If it was intended as a fixed value like `4rem`, use `line-height: 4rem;`. If `leading-16` was custom for `line-height: 1`, then `1` is correct. Tailwind's default `leading-none` is `1`. */
+    }
+  }
+
+span{
+    color:#6c64de ;
+}
+
+.description-paragraph {
+    margin-top: 1.5rem; /* my-6 (6 units * 0.25rem = 1.5rem) */
+    margin-bottom: 1.5rem; /* my-6 */
+    max-width: 42rem; /* max-w-2xl (Tailwind's 2xl max-width is 42rem or 672px) */
+    margin-left: auto; /* m-auto (for horizontal centering) */
+    margin-right: auto; /* m-auto (for horizontal centering) */
+    color: #6b7280; /* text-gray-500 (standard Tailwind gray-500 hex value) */
+    /* Note: m-auto applies to all margins if no specific axis is given,
+       but in combination with max-width, it effectively centers horizontally.
+       Since my-6 is also present, it's vertical margin + horizontal auto. */
+  }
+  
+  /* Responsive styles for screens larger than 'sm' (640px by default in Tailwind) */
+  @media (min-width: 640px) { /* Corresponds to sm: */
+    .description-paragraph {
+      margin-top: 2rem; /* sm:my-8 (8 units * 0.25rem = 2rem) */
+      margin-bottom: 2rem; /* sm:my-8 */
+    }
+  }
+  
+  /* Responsive styles for screens smaller than 'sm' (max-width: 639px) */
+  @media (max-width: 639px) { /* Corresponds to max-sm: */
+    .description-paragraph {
+      font-size: 0.75rem; /* max-sm:text-xs (text-xs is 0.75rem or 12px) */
+    }
+  }
+
+  /* Define custom primary color (example, adjust as needed) */
+:root {
+    --primary-color: #5044E5; /* Example blue-purple color, replace with your actual primary color */
+  }
+  
+  /* Search Form Container (form with Tailwind classes) */
+  .search-form-container {
+    display: flex; /* flex */
+    justify-content: space-between; /* justify-between */
+    max-width: 40rem; /* max-w-lg (Tailwind's lg max-width is 40rem or 640px) */
+    margin-left: auto; /* mx-auto */
+    margin-right: auto; /* mx-auto */
+    border: 1px solid #d1d5db; /* border border-gray-300 */
+    background-color: #ffffff; /* bg-white */
+    border-radius: 0.5rem; /* rounded (Tailwind's default rounded is 0.5rem) */
+    overflow: hidden; /* overflow-hidden */
+  }
+  
+  /* Responsive styles for screens smaller than 'sm' (max-width: 639px) */
+  @media (max-width: 639px) { /* Corresponds to max-sm: */
+    .search-form-container {
+      transform: scale(0.75); /* max-sm:scale-75 */
+      /* When using transform, you might need to adjust positioning or margins
+         as transform doesn't affect layout flow. */
+    }
+  }
+  
+  /* Search Input (input with Tailwind classes) */
+  .search-input {
+    width: 100%; /* w-full */
+    padding-left: 1rem; /* pl-4 (4 units * 0.25rem = 1rem) */
+    outline: none; /* outline-none */
+    border: none; /* Remove default input border */
+    flex-grow: 1; /* Allow input to grow and take available space */
+  }
+  
+  /* Search Button (button with Tailwind classes) */
+  .search-button {
+    background-color: var(--primary-color); /* bg-primary */
+    color: #fff; /* text-white */
+    padding-left: 2rem; /* px-8 (8 units * 0.25rem = 2rem) */
+    padding-right: 2rem; /* px-8 */
+    padding-top: 0.5rem; /* py-2 (2 units * 0.25rem = 0.5rem) */
+    padding-bottom: 0.5rem; /* py-2 */
+    margin: 0.375rem; /* m-1.5 (1.5 units * 0.25rem = 0.375rem). Applies margin on all sides */
+    border-radius: 0.25rem; /* rounded (default small rounded value, or adjust if rounded-md/lg was intended) */
+    transition-property: all; /* transition-all */
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); /* Tailwind default ease-in-out */
+    transition-duration: 150ms; /* Tailwind default duration-150 */
+    cursor: pointer; /* cursor-pointer */
+    border: none; /* Remove default button border */
+  }
+  
+  /* Search Button Hover Effect */
+  .search-button:hover {
+    transform: scale(1.05); /* hover:scale-105 */
+  }
+
+  .clear-search-wrapper {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .clear-search-btn {
+    border: 1px solid #ccc;
+    font-weight: 300; /* font-light */
+    font-size: 0.75rem; /* text-xs */
+    padding: 0.25rem 0.75rem; /* py-1 px-3 */
+    border-radius: 0.25rem; /* rounded-sm */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* shadow-custom-sm equivalent */
+    cursor: pointer;
+    border: 1px solid #5044E5;
+    color: #5044E5;
+    background-color: white;
+    transition: all 0.2s ease;
+  }
+  
+  .clear-search-btn:hover {
+    background-color: #5044E5;
+    color: white;
+    border: 1px solid white;
+  }
+  

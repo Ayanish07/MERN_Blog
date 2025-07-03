@@ -1,0 +1,129 @@
+.Copyright{
+    padding: 10px;
+    text-align: center;
+    
+}
+
+/* Image (img with className='w-32 sm:w-44') */
+.image {
+    width: 8rem; /* w-32 (32 units * 0.25rem = 8rem) */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Responsive image width for small screens and up */
+  @media (min-width: 640px) { /* Corresponds to sm: */
+    .image {
+      width: 11rem; /* sm:w-44 (44 units * 0.25rem = 11rem) */
+    }
+  }
+  
+  /* Logo Description Paragraph (p with className='max-w-[410px] mt-6') */
+  .Logo-desc {
+    max-width: 410px; /* max-w-[410px] - direct pixel value */
+    margin-top: 1.5rem; /* mt-6 (6 units * 0.25rem = 1.5rem) */
+    /* Add any other default text styles here, like color, font-size, line-height, if needed */
+  }
+  
+  /* Define custom primary color (example, adjust as needed) */
+:root {
+    --primary-color-rgb-values: 80, 68, 229; /* RGB values for your primary color, e.g., #5044E5 */
+    --primary-color: #5044E5; /* Define the hex color directly */
+  }
+  
+  /* Footer Wrapper (outer div from image_a8bd3b.png) */
+  .Footer-wrapper {
+    padding-left: 1.5rem; /* px-6 (6 units * 0.25rem = 1.5rem) */
+    padding-right: 1.5rem; /* px-6 */
+    background-color: rgba(var(--primary-color-rgb-values), 0.03); /* bg-primary/3 */
+  }
+  
+  /* Responsive padding for medium screens and up */
+  @media (min-width: 768px) { /* Corresponds to md: */
+    .Footer-wrapper {
+      padding-left: 4rem; /* md:px-16 (16 units * 0.25rem = 4rem) */
+      padding-right: 4rem; /* md:px-16 */
+    }
+  }
+  
+  /* Responsive padding for large screens and up */
+  @media (min-width: 1024px) { /* Corresponds to lg: */
+    .Footer-wrapper {
+      padding-left: 6rem; /* lg:px-24 (24 units * 0.25rem = 6rem) */
+      padding-right: 6rem; /* lg:px-24 */
+    }
+  }
+  
+  /* Responsive padding for extra large screens and up */
+  @media (min-width: 1280px) { /* Corresponds to xl: */
+    .Footer-wrapper {
+      padding-left: 8rem; /* xl:px-32 (32 units * 0.25rem = 8rem) */
+      padding-right: 8rem; /* xl:px-32 */
+    }
+  }
+  
+  
+  /* Footer Links Container (inner div from image_a8bd3b.png) */
+  .Footer-links {
+    display: flex; /* flex */
+    flex-direction: column; /* flex-col */
+    align-items: flex-start; /* items-start */
+    justify-content: space-between; /* justify-between */
+    gap: 2.5rem; /* gap-10 (10 units * 0.25rem = 2.5rem) */
+    padding-top: 2.5rem; /* py-10 (10 units * 0.25rem = 2.5rem) */
+    padding-bottom: 2.5rem; /* py-10 */
+    border-bottom: 1px solid rgba(107, 114, 128, 0.3); /* border-b border-gray-500/30 (Tailwind gray-500 is #6b7280) */
+    color: #6b7280; /* text-gray-500 */
+    /* If you want the content inside to be centered with max-width */
+    max-width: 1440px; /* Example max-width if content is centered */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Responsive flex direction for medium screens and up */
+  @media (min-width: 768px) { /* Corresponds to md: */
+    .Footer-links {
+      flex-direction: row; /* md:flex-row */
+    }
+  }
+
+  /* Grid layout for the footer columns */
+.Footer-grids {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem; /* spacing between columns */
+  }
+  
+  /* Each column inside the grid */
+  .Footer-grids > div {
+    min-width: 150px;
+  }
+  
+  /* Remove bullet points and padding from ul */
+  .Footer-grids ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Optional: spacing between list items */
+  .Footer-grids li {
+    margin-bottom: 8px;
+    
+  }
+  
+  /* Optional: spacing below each h3 */
+  .Footer-grids h3 {
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  .Footer-grids li a{
+    text-decoration: none;
+    color: #6b7280;
+  }
+  
+  .Footer-grids li a:hover {
+    color: var(--primary-color); /* optional: hover color */
+  }
+
+  

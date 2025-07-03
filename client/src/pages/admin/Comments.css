@@ -1,0 +1,90 @@
+.comments-box {
+    flex: 1;
+    padding: 1.25rem 1.25rem;
+    background-color: rgba(59, 130, 246, 0.05); /* bg-blue-50/50 */
+  }
+  
+  @media (min-width: 640px) {
+    .comments-box {
+      padding-top: 3rem;
+      padding-left: 4rem;
+    }
+  }
+  
+  .comments-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 48rem; 
+  }
+  
+  .comments-title {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+  
+  .filter-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .filter-btn {
+    border-radius: 9999px;
+    padding: 0.25rem 1rem;
+    font-size: 0.75rem;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); 
+    transition: all 0.3s ease;
+  }
+  
+  .active-filter {
+    color: #5044E5;
+  }
+  
+  .inactive-filter {
+    color: #374151; 
+  }
+  
+  .comments-table-container {
+    position: relative;
+    height: 80%;
+    max-width: 48rem; /* ~ max-w-3xl */
+    overflow-x: auto;
+    margin-top: 1rem;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 0.5rem;
+  }
+  
+  /* Optional scrollbar hide if you have a custom class */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .comments-table {
+    width: 100%;
+    font-size: 0.875rem; /* ~ text-sm */
+    color: #6b7280; /* ~ text-gray-500 */
+    border-collapse: collapse;
+  }
+  
+  .comments-table-head {
+    font-size: 0.75rem; /* ~ text-xs */
+    color: #374151; /* ~ text-gray-700 */
+    text-align: left;
+    text-transform: uppercase;
+  }
+  
+  .comments-table-header {
+    padding: 0.75rem 1.5rem; /* px-6 py-3 */
+    font-weight: 500;
+  }
+  
+  /* Hide on screens smaller than 640px */
+  @media (max-width: 639px) {
+    .hide-on-small {
+      display: none;
+    }
+  }
+  

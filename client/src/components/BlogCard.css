@@ -1,0 +1,78 @@
+/* Define custom primary color (example, adjust as needed) */
+:root {
+    --primary-color: #5044E5; /* Define the hex color directly */
+  }
+  
+  /* Blog Card Wrapper (outermost div) */
+  .blog-card-wrapper {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    max-width: 100%; /* Prevent too wide */
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    width: 100%;         /* stretch to grid cell width */
+    max-width: 300px;
+    height: 450px;
+  }
+
+  .blog-card-wrapper:hover {
+    transform: translateY(-4px);
+  }
+  
+  /* Image (photo - formerly 'aspect-video') */
+  .photo {
+    width: 100%; /* Ensure image fills its container horizontally */
+    aspect-ratio: 16 / 9; /* aspect-video - common for video/image aspect ratio */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    display: block; /* Remove extra space below image */
+  }
+  
+  /* Category Span (cat - formerly 'ml-5 mt-4 px-3 py-1 inline-block bg-primary/20 rounded-full text-primary text-xs') */
+  .cat {
+    margin-left: 1.25rem; /* ml-5 (5 units * 0.25rem = 1.25rem) */
+    margin-top: 1rem; /* mt-4 (4 units * 0.25rem = 1rem) */
+    padding-left: 0.75rem; /* px-3 (3 units * 0.25rem = 0.75rem) */
+    padding-right: 0.75rem; /* px-3 */
+    padding-top: 0.25rem; /* py-1 (1 unit * 0.25rem = 0.25rem) */
+    padding-bottom: 0.05rem; /* py-1 */
+    display: inline-block; /* inline-block */
+    background-color: rgba(var(--primary-color-rgb-values), 0.2); /* bg-primary/20 */
+    border-radius: 9999px; /* rounded-full */
+    color: var(--primary-color); /* text-primary */
+    font-size: 0.75rem; /* text-xs (typically 12px) */
+  }
+  
+  /* Content Div (Content - formerly 'p-5') */
+  .Content {
+    padding-bottom: 1.25rem; /* p-5 (5 units * 0.25rem = 1.25rem) */
+    padding-left: 1.25rem; 
+    padding-right: 1.25rem; 
+}
+  
+  /* Title Heading (title - formerly 'mb-2 font-medium text-gray-900') */
+  .title {
+    margin-bottom: 0.5rem;              /* spacing below the title */
+    font-weight: 800;                   /* make it bold */
+    font-size: 1.5rem;                /* text-lg (18px) */
+    line-height: 1.375;                 /* for readability */
+    color: #1a202c;                     /* Tailwind's gray-900 */
+  /* 👇 Force words to wrap */
+  white-space: normal;
+  
+  }
+  
+  
+  /* Description Paragraph (Desc - no direct Tailwind classes in snippet) */
+  .Desc {
+    /* No specific Tailwind classes provided for this paragraph in the snippet. */
+    /* It will inherit font-size/color from parent or browser defaults. */
+    /* You can add custom styles here if needed, e.g.: */
+    color: #4a5568; /* Example: text-gray-700 */
+    font-size: 0.875rem; /* Example: text-sm */
+    line-height: 1.5;
+    margin-bottom: 0.75rem; /* Example: for readability */
+    white-space: normal;   /* ✅ allow line wrapping */
+    overflow-wrap: break-word; /* ✅ break long words if needed */
+  }

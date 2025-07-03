@@ -1,0 +1,50 @@
+.blog-row {
+    border-top: 1px solid #d1d5db; /* Tailwind's border-gray-300 */
+    border-bottom: 1px solid #d1d5db;
+  }
+  
+  .blog-cell {
+    padding: 0.5rem; /* py-4 px-2 */
+  }
+  
+  /* Responsive hiding */
+  @media (max-width: 640px) {
+    .date-cell,
+    .status-cell {
+      display: none;
+    }
+  }
+  
+  .index-cell {
+    font-weight: bold;
+  }
+  
+  .published {
+    color: #16a34a; /* Tailwind's green-600 */
+  }
+  
+  .unpublished {
+    color: #c2410c; /* Tailwind's orange-700 */
+  }
+  
+  .actions-cell {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 0.75rem;
+    align-items: center;
+  }
+  
+  .publish-btn {
+    padding: 0.25rem 0.5rem;
+    margin-top: 0.25rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  
+  .delete-icon {
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+  }
+  

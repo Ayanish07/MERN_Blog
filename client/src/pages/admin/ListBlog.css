@@ -1,0 +1,71 @@
+.Latest-Blogs-Header{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #595c62; 
+  }
+
+  .Latest-Blogs-table-holder {
+    position: relative;
+    max-width: 64rem; /* max-w-4xl */
+    overflow-x: auto;
+    background-color: #ffffff;
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .Latest-Blogs-table-holder::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+  
+  .Latest-Blogs-table {
+    width: 100%;
+    font-size: 0.875rem; /* text-sm */
+    color: #6b7280; /* text-gray-500 */
+    border-collapse: collapse;
+  }
+  
+  .Latest-Blogs-heading {
+    font-size: 0.75rem; /* text-xs */
+    color: #4b5563; /* text-gray-600 */
+    text-align: left;
+    text-transform: uppercase;
+  }
+  
+  .table-header {
+    padding: 0.5rem;
+    color: #6B7280;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+  
+  /* Extra large screens: Apply more padding */
+  @media (min-width: 1280px) {
+    .table-header {
+      padding-left: 1.5rem; /* same as Tailwind's xl:px-6 */
+      padding-right: 1.5rem;
+    }
+  }
+  
+  /* Small screens and below: Hide column */
+  @media (max-width: 639px) {
+    .table-header {
+      display: none;
+    }
+  }
+  
+  .All-Blogs-holder{
+    padding: 2rem;
+    overflow-x: auto ;
+    overflow-y: auto;
+    max-height: 43.75rem;
+  }
+ 
+  h3{
+    font-weight: 400;
+  }
